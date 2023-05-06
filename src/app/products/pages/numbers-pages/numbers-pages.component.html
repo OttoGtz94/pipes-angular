@@ -1,0 +1,21 @@
+<p-panel header="Pipes Numéricos" class="p-1">
+  <p>Pipes incluídos en Angular</p>
+</p-panel>
+
+<div class="grid">
+  <div class="col-12 md:col-4">
+    <p-card header="Numeros decimales" [subheader]="totalSells.toString()">
+      {{ totalSells | number : "1.2-2" }}
+    </p-card>
+  </div>
+  <div class="col-12 md:col-4">
+    <p-card header="Moneda" [subheader]="totalSells.toString()">
+      {{ totalSells | currency : "MXN" : "symbol-narrow" }}
+    </p-card>
+  </div>
+  <div class="col-12 md:col-4">
+    <p-card header="Porcentaje" [subheader]="percent.toString()">
+      {{ percent | percent : "1.2-2" }}
+    </p-card>
+  </div>
+</div>
